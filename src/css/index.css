@@ -1,0 +1,14 @@
+#main_container {
+    /*サイズと位置*/
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    /*デザイン*/
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+}

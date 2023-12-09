@@ -40,6 +40,7 @@ if ($regist) {
                 <span class="obfuscated"></span>
                 <h1>一言BBS</h1>
                 <span class="obfuscated"></span>
+                <marquee>名前欄に「#<トリップキー>」と入力すると、トリップが生成されます。トリップキーは12文字のみ受け付けます。</marquee>
             </header>
             <h2>新規投稿</h2>
             <form action="send.php" method="post">

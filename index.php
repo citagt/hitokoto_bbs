@@ -26,20 +26,25 @@ if ($regist) {
 <html>
     <head>
         <meta charset="UTF-8">
+        <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+        <!--CSS Stylesheet-->
         <link rel="stylesheet" type="text/css" href="/src/css/index.css">
         <title>一言BBS</title>
     </head>
     <body>
         <div id="main_container">
             <h1>一言BBS</h1>
-            <p>新規投稿</p>
+            <h2>新規投稿</h2>
             <form action="send.php" method="post">
-                名前 : <input type="text" name="name" value=""><br>
-                e-mail : <input type="text" name="email" value=""><br>
-                投稿内容 : <br><textarea cols="100" rows="8" name="contents"></textarea><br>
+                名前 : <input type="text" name="name" value="" maxlength="30"><br>
+                e-mail : <input type="text" name="email" value="" maxlength="50"><br>
+                投稿内容 : <br><textarea cols="100" rows="8" name="contents" maxlength="500"></textarea><br>
                 <button type="submit">投稿</button>
             </form>
-            <h2>投稿内容一覧</h2>
+            <h3>投稿内容一覧</h3>
                 <?php foreach($regist as $loop):?>
                     <div class="uploads">
                         <?php echo $loop['id']?> 名前 : <?php echo $loop['name']?> <?php echo $loop['email']?> : <?php echo $loop['created_at']?><br>

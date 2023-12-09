@@ -1,19 +1,37 @@
+body {
+    background-color: #000000;
+}
+
 #main_container {
     /*サイズと位置*/
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 
     /*デザイン*/
-    background-color: aqua;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 h1 {
+    font-family: 'Noto Serif JP';
+    font-weight: 900;
     text-align: center;
 }
 
+h2 {
+    font-family: 'Noto Serif JP';
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Noto Serif JP';
+    font-weight: 900;
+}
+
 input {
-    max-width: 300px;
+    max-width: 30em;
     width: 100%;
     box-sizing: border-box;
 }

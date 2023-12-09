@@ -1,3 +1,6 @@
+<?php
+require_once 'func_trip.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,10 +23,10 @@
         $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
         $contents = htmlspecialchars($contents, ENT_QUOTES, 'UTF-8');
 
-        if(strpos($email, '#') == 0) {
-            echo "トリップです";
+        if(gettype(strpos($name, "#")) == "integer") {
+            echo "トリップ記号をを検出しました。";
             echo "<br>";
-            $email = "◆".substr(hash("sha3-256", substr($email, 1)), 0, 12);
+            $name = hashdelete($name).tripcode(tripcodekey_extract($name));
         }
         //DB接続情報を設定します。
         $pdo = new PDO(

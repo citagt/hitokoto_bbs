@@ -46,15 +46,15 @@ if ($regist) {
             <form action="send.php" method="post">
                 名前 : <input type="text" name="name" value="" maxlength="30"><br>
                 e-mail : <input type="text" name="email" value="" maxlength="50"><br>
-                投稿内容 : <br><textarea cols="100" rows="8" name="contents" maxlength="500"></textarea><br>
+                投稿内容 : <br><textarea cols="100" rows="8" name="contents" maxlength="500" required></textarea><br>
                 <button type="submit">投稿</button>
             </form>
             <h3>投稿内容一覧</h3>
             <div id="uploads_list">
                 <?php foreach($regist as $loop):?>
                     <div class="upload">
-                        <?php echo $loop['id']?> 名前 : <?php echo $loop['name']?> <?php echo $loop['email']?> : <?php echo $loop['created_at']?><br>
-                        投稿内容 : <?php echo $loop['contents']?>
+                        <?php echo $loop['id']?> 名前 : <span class="name"><?php echo $loop['name']?></span> <?php echo $loop['email']?> : <?php echo $loop['created_at']?><br>
+                        <?php echo $loop['contents']?>
                     </div>
                 <?php endforeach;?>
             </div>

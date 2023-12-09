@@ -1,19 +1,50 @@
+body {
+    background-color: #000000;
+}
+
 #main_container {
     /*サイズと位置*/
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 
     /*デザイン*/
-    background-color: aqua;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 10px 10px 5px #888888;
 }
 
-h1 {
+header {
     text-align: center;
 }
 
+.obfuscated {
+    display: block;
+}
+
+marquee {
+    font-weight: 900;
+    color: #00ff00;
+}
+
+h1 {
+    font-family: 'Noto Serif JP';
+    font-weight: 900;
+    display: inline;
+}
+
+h2 {
+    font-family: 'Noto Serif JP';
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Noto Serif JP';
+    font-weight: 600;
+}
+
 input {
-    max-width: 300px;
+    max-width: 30em;
     width: 100%;
     box-sizing: border-box;
 }
@@ -23,15 +54,70 @@ textarea {
     box-sizing: border-box;
 }
 
-.uploads {
+#uploads_list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.upload {
+    /*サイズと位置*/
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0;
+    padding: 10px;
+    /*デザイン*/
+    border: 2px solid #cccccc;
     box-sizing: border-box;
-    background-color: red;
+    box-shadow: 4px 4px 4px #80006c;
 }
 
 @media screen and (min-width:886px) {
+    marquee {
+        font-size: 16px;
+    }
+
+    .obfuscated {
+        font-size: 16px;
+    }
+
     h1 {
         font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .upload {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:885px) {
+    marquee {
+        font-size: 9px;
+    }
+
+    .obfuscated {
+        font-size: 9px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .upload {
+        font-size: 9px;
     }
 }

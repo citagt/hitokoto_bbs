@@ -23,6 +23,10 @@ require_once 'func_trip.php';
         $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
         $contents = htmlspecialchars($contents, ENT_QUOTES, 'UTF-8');
 
+        if(($name == "") || (strpos($name, "#") == 0)) {
+            $name = "無名者".$name;
+        }
+
         if(gettype(strpos($name, "#")) == "integer") {
             echo "トリップ記号をを検出しました。";
             echo "<br>";

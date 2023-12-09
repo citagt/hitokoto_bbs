@@ -14,20 +14,28 @@ body {
     box-shadow: 10px 10px 5px #888888;
 }
 
+header {
+    text-align: center;
+}
+
+.obfuscated {
+    display: block;
+}
+
 h1 {
     font-family: 'Noto Serif JP';
     font-weight: 900;
-    text-align: center;
+    display: inline;
 }
 
 h2 {
     font-family: 'Noto Serif JP';
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h3 {
     font-family: 'Noto Serif JP';
-    font-weight: 900;
+    font-weight: 600;
 }
 
 input {
@@ -41,15 +49,62 @@ textarea {
     box-sizing: border-box;
 }
 
-.uploads {
+#uploads_list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.upload {
+    /*サイズと位置*/
     width: 100%;
-    margin: 10px 0;
+    margin: 20px 0;
+    padding: 10px;
+    /*デザイン*/
+    border: 2px solid #cccccc;
     box-sizing: border-box;
-    background-color: red;
+    box-shadow: 4px 4px 4px #80006c;
 }
 
 @media screen and (min-width:886px) {
+    .obfuscated {
+        font-size: 16px;
+    }
+
     h1 {
         font-size: 48px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .upload {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:885px) {
+    .obfuscated {
+        font-size: 9px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .upload {
+        font-size: 9px;
     }
 }

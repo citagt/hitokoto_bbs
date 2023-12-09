@@ -26,17 +26,21 @@ if ($regist) {
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+        <!--Fonts-->
+        <link rel="stylesheet" type="text/css" href="/src/css/font.css">
         <!--CSS Stylesheet-->
         <link rel="stylesheet" type="text/css" href="/src/css/index.css">
+        <!--Javascript-->
+        <script type="text/javascript" src="/src/js/obfuscated.js" async></script>
         <title>一言BBS</title>
     </head>
     <body>
         <div id="main_container">
-            <h1>一言BBS</h1>
+            <header>
+                <span class="obfuscated"></span>
+                <h1>一言BBS</h1>
+                <span class="obfuscated"></span>
+            </header>
             <h2>新規投稿</h2>
             <form action="send.php" method="post">
                 名前 : <input type="text" name="name" value="" maxlength="30"><br>
@@ -45,12 +49,14 @@ if ($regist) {
                 <button type="submit">投稿</button>
             </form>
             <h3>投稿内容一覧</h3>
+            <div id="uploads_list">
                 <?php foreach($regist as $loop):?>
-                    <div class="uploads">
+                    <div class="upload">
                         <?php echo $loop['id']?> 名前 : <?php echo $loop['name']?> <?php echo $loop['email']?> : <?php echo $loop['created_at']?><br>
                         投稿内容 : <?php echo $loop['contents']?>
                     </div>
                 <?php endforeach;?>
+            </div>
         </div>
     </body>
 </html>

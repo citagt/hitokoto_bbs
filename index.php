@@ -34,17 +34,17 @@ if ($regist) {
             <h1>一言BBS</h1>
             <p>新規投稿</p>
             <form action="send.php" method="post">
-                e-mail : <input type="text" name="email" value="">
-                ニックネーム : <input type="text" name="name" value=""><br>
+                名前 : <input type="text" name="name" value=""><br>
+                e-mail : <input type="text" name="email" value=""><br>
                 投稿内容 : <br><textarea cols="100" rows="8" name="contents"></textarea><br>
                 <button type="submit">投稿</button>
             </form>
             <h2>投稿内容一覧</h2>
                 <?php foreach($regist as $loop):?>
-                    <div>No : <?php echo $loop['id']?></div>
-                    <div>メールアドレス : <?php echo $loop['email']?></div>
-                    <div>ニックネーム : <?php echo $loop['name']?></div>
-                    <div>投稿内容 : <?php echo $loop['contents']?></div>
+                    <div class="uploads">
+                        <?php echo $loop['id']?> 名前 : <?php echo $loop['name']?> <?php echo $loop['email']?> : <?php echo $loop['created_at']?><br>
+                        投稿内容 : <?php echo $loop['contents']?>
+                    </div>
                 <?php endforeach;?>
         </div>
     </body>

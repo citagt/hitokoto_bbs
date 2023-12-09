@@ -1,7 +1,7 @@
 #main_container {
     /*サイズと位置*/
-    width: 1200px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 
     /*デザイン*/
@@ -10,5 +10,28 @@
 
 h1 {
     text-align: center;
-    font-size: 48px;
+}
+
+input {
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.uploads {
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: red;
+}
+
+@media screen and (min-width:886px) {
+    h1 {
+        font-size: 48px;
+    }
 }
